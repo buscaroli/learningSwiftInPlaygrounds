@@ -20,7 +20,7 @@ class Jury {
     }
     
     func introduction() {
-        "The Jury of \(award) has reached a verdict."
+        print("The Jury of \(award) has reached a verdict.")
     }
     
     func sendLetter(to person: Person) {
@@ -36,6 +36,7 @@ struct Presenter: IsAuthorized {
     init(presenterName: String, jury handler: Jury) {
         self.presenterName = presenterName
         handler.delegate = self
+        handler.introduction()
     }
     
     func givesPrize( _ recipient: Person) {
