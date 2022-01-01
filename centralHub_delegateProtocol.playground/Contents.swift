@@ -32,7 +32,7 @@ struct CarDriver:HasVan {
     }
     
     func deliver(to address: String) {
-        print("John is delivering to \(address) by car.")
+        print("The Car driver is delivering to \(address).")
     }
 }
 
@@ -42,7 +42,7 @@ struct BikeDriver:HasVan {
     }
     
     func deliver(to address: String) {
-        print("Mike is delivering to \(address) by bike.")
+        print("The Bike Driver is delivering to \(address).")
     }
 }
 
