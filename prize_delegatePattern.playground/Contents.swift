@@ -24,7 +24,8 @@ class Jury {
     }
     
     func sendLetter(to person: Person) {
-        print("Sending a letter to notify \(person.name).")
+        print("\nSending a letter to notify \(person.name).")
+        delegate?.givesPrize(person)
     }
 }
 
@@ -36,13 +37,11 @@ struct Presenter: IsAuthorized {
     init(presenterName: String, jury handler: Jury) {
         self.presenterName = presenterName
         handler.delegate = self
-        handler.introduction()
     }
     
     func givesPrize( _ recipient: Person) {
-        print("\(presenterName) gives to \(recipient.name) their prize at their house in \(recipient.address).")
+        print("\(presenterName) gives the prize to \(recipient.name) at their place in \(recipient.address).")
     }
-    
 }
 
 
@@ -60,8 +59,8 @@ let person1 = Person(name: "Mark", address: "123 commercial Road, NewTown")
 let person2 = Person(name: "Patrizia", address: "via Indipendenza 24, Bologna")
 let person3 = Person(name: "William", address: "3 Crescent Drive, Bath")
 
-george.givesPrize(person1)
-marcello.givesPrize(person2)
-ricky.givesPrize(person3)
+nobel.sendLetter(to: person1)
+strega.sendLetter(to: person2)
+oscars.sendLetter(to: person3)
 
 
