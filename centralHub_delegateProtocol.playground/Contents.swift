@@ -1,3 +1,9 @@
+// DELEGATE PATTERN or DELEGATION PATTERN
+// I want by object to be able to perform certain actions, but the way the actions
+// are implemented is delegated to other objects.
+// In this example I want the CentralHUB to be able to make deliveries to customers
+// but I let the delegates (CarDriver and BikeDriver) to decide how to implement the delivery action.
+
 import UIKit
 
 // Protocol: any Class or Struct adhering to this protocol must implement a "deliver" function
